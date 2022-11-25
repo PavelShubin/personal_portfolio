@@ -2,16 +2,16 @@
 
 
 <div class="container text-center">
-    <font size="10">Blog</font><br>
+    <h1>Blog</font></h1>
     Pavel was written {{ amount_of_blogs }} blogs
 </div>
 
 <div style="margin-left:50px;">
     {% for blog in blogs %}
 
-    <font size="10" color="blue">{{ blog.Title }}</font><br>
-    <font size="4" color="grey">{{ blog.Date }}</font><br>
-    <h2 size="1">{{ blog.Text }}</h2>
+    <a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.Title }}</h2></a>
+    <h5>{{ blog.Date }}</h5><br>
+    <p>{{ blog.Text }}</p>
 
     <br><br>
 
